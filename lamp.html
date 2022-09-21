@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <title>Ligh Bulp</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background:black ;
+        }
+        #lamp {
+            margin-top: 50px;
+            margin-left: 40% ;
+        }
+
+        .container {
+            background: snow;
+            padding: 10px;
+            height: 400px;
+        }
+
+        .switch {
+            margin-left: 25%;
+            padding: 20px;
+        }
+
+        button {
+            padding: 20px;
+            background: forestgreen;
+            border: none;
+            color: white;
+            font-weight: 800;
+        }
+
+        button:active {
+            background: darkgreen;
+            transform: scale(0.9);
+        }
+
+        .off {
+            background: red;
+        }
+
+
+
+
+        
+        /* ADVANCE SWITCH */
+        .switcher {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            margin-left: 20%;
+        }
+
+        .switcher input { 
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        .slider.round {
+            border-radius: 34px;
+        }
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="container">
+    <img id='lamp' src="img_bulboff.gif">
+    
+    <section class="switch">
+        <button>Turn On</button>
+        <button class="off">Turn Off</button>
+        <br><br>
+
+        <label class="switcher">
+            <input type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+
+    </section>
+    
+</div>
+</body>
+</html>
